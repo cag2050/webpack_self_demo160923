@@ -31,7 +31,8 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
     devtool: "source-map",
-    entry: getEntry(),
+    //entry: getEntry(),
+    entry:'./src/js/page/person_use.js',
     output: {
         path: path.join(__dirname, "build" + jspage), //文件输出目录
         // publicPath: 'http://localhost:63342/webpack_self_demo160914/build/',
@@ -49,7 +50,9 @@ var config = {
             {test: /\.scss$/, loader: "style!css!sass"},
             {test: /\.(png|jpg)$/, loader: 'url'},
             {
-                test: path.join(__dirname, 'js/page'),
+                //test: path.join(__dirname, 'js/page'),
+                test: /\.js|jsx$/,
+                exclude: "/node_modules/",
                 loader: 'babel-loader',
                 query: {
                     presets: ['es2015']
@@ -60,10 +63,10 @@ var config = {
     plugins: [
         //new IgnorePlugin(/jquery/),
         //此处开启，html页面必须引入公用js
-        new CommonsChunkPlugin({
-            filename: "common.js",
-            name: "common"
-        }),
+        //new CommonsChunkPlugin({
+        //    filename: "common.js",
+        //    name: "common"
+        //}),
         // new UglifyJsPlugin({
         //     compress: {
         //         warnings: false
