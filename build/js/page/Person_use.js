@@ -52,9 +52,9 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var p = new _Person2.default('����', 20); /**
-	                                           * Created by cag on 2016/9/23.
-	                                           */
+	var p = new _Person2.default('张三', 20); /**
+	                                         * Created by cag on 2016/9/23.
+	                                         */
 	
 	document.write(p.say());
 
@@ -86,7 +86,7 @@
 	    _createClass(Person, [{
 	        key: "say",
 	        value: function say() {
-	            return "$(this.name) $(this.age)";
+	            return "我的名字是：" + this.name + "，我今年" + this.age + "岁了。";
 	        }
 	    }]);
 	
@@ -97,4 +97,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=Person_use.js.map

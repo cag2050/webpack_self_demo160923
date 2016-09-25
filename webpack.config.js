@@ -21,7 +21,7 @@ var getEntry = function () {
         }
     });
     return files;
-}
+};
 
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 var UglifyJsPlugin = require("webpack/lib/optimize/UglifyJsPlugin");
@@ -30,9 +30,10 @@ var IgnorePlugin = require("webpack/lib/IgnorePlugin");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
+    // 开发调试信息
     devtool: "source-map",
-    //entry: getEntry(),
-    entry:'./src/js/page/person_use.js',
+    entry: getEntry(),
+    //entry:'./src/js/page/Person_use.js',
     output: {
         path: path.join(__dirname, "build" + jspage), //文件输出目录
         // publicPath: 'http://localhost:63342/webpack_self_demo160914/build/',
@@ -45,7 +46,11 @@ var config = {
     // },
     module: {
         loaders: [
+            // 样式被打包到脚本中
             // {test: /\.css$/, loader: 'style!css'},
+            /* 样式不被打包到脚本中，而是独立出来作为.css，
+             * 然后在页面中以<link>标签引入
+             */
             {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
             {test: /\.scss$/, loader: "style!css!sass"},
             {test: /\.(png|jpg)$/, loader: 'url'},
@@ -58,6 +63,11 @@ var config = {
                     presets: ['es2015']
                 }
             }
+            //{
+            //    test: /\.js?$/,
+            //    loaders: ['react-hot', 'babel'],
+            //    exclude: /node_modules/
+            //}
         ]
     },
     plugins: [
@@ -74,7 +84,7 @@ var config = {
         // }),
         new ExtractTextPlugin("[name].css")
     ]
-}
+};
 
 // console.log(config);
 module.exports = config;

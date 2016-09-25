@@ -1,7 +1,7 @@
 /**
  * Created by cag on 2016/9/23.
  */
-import Person from './Person.js';
+import Person from './Person.jsx';
 
-let p = new Person('ÕÅÈý', 20);
+let p = new Person('å¼ ä¸‰', 20);
 document.write(p.say());
