@@ -32,10 +32,10 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var config = {
     // 开发调试信息
     devtool: "source-map",
-    // 文件入口
+    // 页面入口文件
     entry: getEntry(),
     //entry:'./src/js/page/Person_use.js',
-    // 输出文件配置
+    // 打包后输出文件配置
     output: {
         path: path.join(__dirname, "build" + jspage), //文件输出目录
         // publicPath: 'http://localhost:63342/webpack_self_demo160914/build/',
@@ -47,7 +47,7 @@ var config = {
     //    alias: {},
     //    extensions: ['', '.js', '.jsx']
     //},
-    // 模块配置，处理文件的loader配置
+    // 处理文件的加载器loader配置
     module: {
         loaders: [
             // 样式被打包到脚本中
