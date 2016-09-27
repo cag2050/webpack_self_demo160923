@@ -1,2 +1,2 @@
-!function(e){function r(o){if(t[o])return t[o].exports;var n=t[o]={exports:{},id:o,loaded:!1};return e[o].call(n.exports,n,n.exports,r),n.loaded=!0,n.exports}var t={};return r.m=e,r.c=t,r.p="",r(0)}([function(e,r){"use strict";document.write("hello webpack ----main2。");var t="aaa";document.write(t)}]);
+!function(t){function e(n){if(r[n])return r[n].exports;var o=r[n]={exports:{},id:n,loaded:!1};return t[n].call(o.exports,o,o.exports,e),o.loaded=!0,o.exports}var r={};return e.m=t,e.c=r,e.p="",e(0)}({0:function(t,e,r){"use strict";document.write("hello webpack ----main2。");var n="aaa";document.write(n),r(5)},5:function(t,e){}});
 //# sourceMappingURL=main2.js.map
