@@ -1,0 +1,2 @@
+!function(o){function r(n){if(e[n])return e[n].exports;var t=e[n]={exports:{},id:n,loaded:!1};return o[n].call(t.exports,t,t.exports,r),t.loaded=!0,t.exports}var e={};return r.m=o,r.c=e,r.p="",r(0)}([function(o,r,e){"use strict";var n=e(!function(){var o=new Error('Cannot find module "./export_var.js"');throw o.code="MODULE_NOT_FOUND",o}());console.log("name = "+n.name),console.log("age = "+n.age)}]);
+//# sourceMappingURL=import_var.js.map
