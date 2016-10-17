@@ -39,8 +39,9 @@ var config = {
     output: {
         path: path.join(__dirname, "build" + jspage), //文件输出目录
         // publicPath: 'http://localhost:63342/webpack_self_demo160914/build/',
-        filename: "[name].js",
-        sourceMapFilename: "[file].map"
+        filename:"bundle.js"
+        // filename: "[name].js",
+        // sourceMapFilename: "[file].map"
     },
     // 文件后缀名自动补全
     //resolve: {
